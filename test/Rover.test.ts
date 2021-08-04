@@ -25,7 +25,12 @@ describe("Rover should", () => {
     ["LLL", "0:0:E"],
     ["LLLL", "0:0:N"],
     ["RM", "1:0:E"],
+    ["RMMMM", "4:0:E"],
+    ["RMMMMMMMMMM", "1:0:E"],
     ["RRM", "0:9:S"],
+    ["RRMMMMMM", "0:4:S"],
+    ["RRRM", "9:0:W"],
+    ["RRRRM", "0:1:N"],
   ])(`input command of %p returns %p`, (command: string, result: string) => {
     expect(rover.execute(command)).toEqual(result);
   });

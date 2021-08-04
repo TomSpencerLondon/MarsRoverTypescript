@@ -42,7 +42,7 @@ export default class Grid {
 
   private goEast(): number {
     if (this.getX() === 9) {
-      return 9;
+      return 1;
     }
     return this.getX() + 1;
   }
