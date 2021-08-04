@@ -4,8 +4,8 @@ import Controller from "./Controller";
 export default class Rover {
   private controller: Controller;
 
-  constructor(controller: Controller) {
-    this.controller = controller;
+  constructor() {
+    this.controller = new Controller();
   }
 
   execute(command: string): string {

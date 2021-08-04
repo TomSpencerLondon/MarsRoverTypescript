@@ -1,8 +1,6 @@
 import Rover from "../src/Rover";
-import Controller from "../src/Controller";
 
-const controller: Controller = new Controller();
-const rover: Rover = new Rover(controller);
+const rover: Rover = new Rover();
 
 describe("Rover should", () => {
   test("return current coordinates", () => {
