@@ -1,18 +1,20 @@
+import { Direction } from "./Direction";
+import Controller from "./Controller";
+
 export default class Rover {
+  private controller: Controller;
+
+  constructor(controller: Controller) {
+    this.controller = controller;
+  }
+
   execute(command: string): string {
     const position = "0:0";
-    let direction = "N";
+    let direction = Direction.North;
+    const commands = command.split("");
 
-    if (command === "R") {
-      direction = "E";
-    }
-
-    if (command == "RR") {
-      direction = "S";
-    }
-
-    if (command == "RRR") {
-      direction = "W";
+    for (let i = 0; i < commands.length; i++) {
+      direction = this.controller.rotate(commands[i], direction);
     }
 
     return `${position}:${direction}`;
