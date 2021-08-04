@@ -10,7 +10,7 @@ describe("Rover should", () => {
     ["R", "0:0:E"],
     ["RR", "0:0:S"],
     ["RRR", "0:0:W"],
-  ])("rotate right", (command: string, result: string) => {
+  ])(`input command of %p returns %p`, (command: string, result: string) => {
     expect(rover.execute(command)).toEqual(result);
   });
 });
