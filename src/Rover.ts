@@ -1,17 +1,20 @@
 export default class Rover {
   execute(command: string): string {
+    const position = "0:0";
+    let direction = "N";
+
     if (command === "R") {
-      return "0:0:E";
+      direction = "E";
     }
 
     if (command == "RR") {
-      return "0:0:S";
+      direction = "S";
     }
 
     if (command == "RRR") {
-      return "0:0:W";
+      direction = "W";
     }
 
-    return "0:0:N";
+    return `${position}:${direction}`;
   }
 }
